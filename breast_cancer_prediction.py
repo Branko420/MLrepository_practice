@@ -1,7 +1,7 @@
 from sklearn.datasets import load_breast_cancer 
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score, f1_score, recall_score, precision_score
 
 
 #loading the datasete
@@ -19,3 +19,6 @@ y_predict = classifier.predict(x_test)
 
 #accuracy score
 print(100*accuracy_score(y_test, y_predict),'%')
+
+#F1 score
+print(f1_score(y_test, y_predict))
